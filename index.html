@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsだけでつくるお！</title>
+</head>
+<body>
+
+    <script>
+        'use strict';
+
+        const wrap = document.createElement('div');
+        wrap.classList.add('wrap');
+        wrap.textContent = 'ラッパーです';
+        document.body.appendChild(wrap);
+
+        //参考
+        //https://qiita.com/kouh/items/dfc14d25ccb4e50afe89
+
+        const header = document.createElement('header');
+        header.textContent = 'ヘッダーです';
+
+        document.wrap.appendChild(header);
+    </script>
+</body>
+</html>
