@@ -11,17 +11,50 @@
         'use strict';
 
         const wrap = document.createElement('div');
-        wrap.classList.add('wrap');
+            const header = document.createElement('header');
+            const main   = document.createElement('main');
+            const footer = document.createElement('footer');
+                const pElement = document.createElement("p"); // p要素作成
+
+
+        // wrap.classList.add('wrap');//クラス追加
+        wrap.setAttribute("id","wrapper");//divに#wraperを追加
         wrap.textContent = 'ラッパーです';
         document.body.appendChild(wrap);
+            header.textContent = 'ヘッダーです';//headerに文字追加
+            document.getElementById("wrapper").appendChild(header);
+            main.textContent = 'メインコンテンツ';
+            
+            document.getElementById("wrapper").appendChild(main);
+                main.setAttribute("id","main");
+                //document.main.appendChild(pElement);
+                showFlex();
+                
+                for (let i = 0; i < 4 ;i++){
+                    const div = document.createElement('div');
+                    div.classList.add('box');
+                    div.textContent = i;
+                    document.getElementById('main').appendChild(div);
+                }
+                
+                
+
+            footer.textContent = 'Copyright ©2020 Nishiguchi Syo. All rights reserved.';
+            document.getElementById("wrapper").appendChild(footer);
+
 
         //参考
         //https://qiita.com/kouh/items/dfc14d25ccb4e50afe89
 
-        const header = document.createElement('header');
-        header.textContent = 'ヘッダーです';
+        //function関数
+        function showFlex(box){
+            const flex = document.createElement('div');
+            flex.classList.add("flexBox");
+            flex.textContent = 'フレックスボックス';
+            console.log('flexBoxでてます');
+            document.getElementById("main").appendChild(flex);
+        }
 
-        document.wrap.appendChild(header);
     </script>
 </body>
 </html>

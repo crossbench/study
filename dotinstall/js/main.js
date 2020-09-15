@@ -125,10 +125,117 @@
 //     //Shift + @マークでバッククォート
 // }
 
-let hp = 100;
+// let hp = 100;
 
-while (hp > 0){
-    console.log(`${hp} HP left!`)
-    hp -= 15;
+// while (hp > 0){
+//     console.log(`${hp} HP left!`)
+//     hp -= 15;//この処理を忘れると無限ループ
+// }
+
+
+// do whileだとHPが見えてから処理
+// let hp = -50;
+
+// do {
+//     console.log(`${hp} HP left!`)
+//     hp -= 15;//この処理を忘れると無限ループ
+// } while (hp > 0)
+
+
+// for(let i = 1; i <= 10; i++){
+//     if(i % 3 === 0){
+//         continue;
+//     }
+//     console.log(i);
+// }
+
+
+// for(let i = 1; i <= 10; i++){
+//     if(i === 4){
+//         break;
+//     }
+//     console.log(i);
+// }
+
+// function関数
+// function showAd(){
+//     console.log('------------------------');
+//     console.log('-----------ad-----------');
+//     console.log('------------------------'); 
+// }
+
+// showAd();
+// console.log('-------テスト---------');
+// console.log('-------テスト---------');
+// showAd();
+
+//引数を使ってみる
+
+// function showAd(message = 'Ad'){ //仮引数
+//     console.log('------------------------');
+//     console.log(`-----------${message}-----------`);
+//     console.log('------------------------'); 
+// }
+// showAd('Header Ad'); //実引数
+// console.log('Tom is Great!');
+// console.log('Tom is Great!');
+// showAd('Footer Ad');
+// showAd();//初期値がAdに設定
+
+
+// function sum(a,b,c){
+//     // console.log(a + b + c);
+//     return a + b + c;
+//     console.log('リターンのあとは処理されない');
+// }
+
+// // sum(1,2,3);
+// // sum(3,4,5);
+
+// const total = sum(1,2,3) + sum(3,4,5);
+// console.log(total);
+
+
+//関数式
+// const sum = function (a,b,c){
+//     return a + b + c;
+// };
+
+// const total = sum(1,2,3) + sum(3,4,5);
+// console.log(total);
+
+//アロー関数
+// const sum = (a,b,c) => a + b + c;
+
+// const total = sum(1,2,3) + sum(3,4,5);
+// console.log(total);
+
+// const double = function(a){
+//     return a * 2
+// };
+
+//アロー関数にすると
+// const double = a => a * 2;
+// console.log(double(12));
+
+
+//スコープ
+// const x = 2;
+
+// function f() {
+//     const x = 1;
+//     console.log(x);
+// }
+
+// f();
+// console.log(x);
+
+{
+    const x = 100;
+    console.log(x);    
 }
+
+
+
+
 
